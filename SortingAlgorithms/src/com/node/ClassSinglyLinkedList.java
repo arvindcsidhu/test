@@ -6,8 +6,16 @@ public class ClassSinglyLinkedList {
 	private int NodeLength(ClassNode node) {
 
 		int count = 0;
+		if(node != null){
+			System.out.println("elements in node are:"+node.getData());
+		}
 		while (node != null) {
+			
 			node = node.getNext();
+			if(node != null){
+			System.out.println("elements in node are:"+node.getData());
+			
+			}
 			count++;
 		}
 		return count;
@@ -69,15 +77,15 @@ public class ClassSinglyLinkedList {
 		list.insertNode(node);
 		list.insertNode(node1);
 		list.insertNode(node2);
-		list.deleteNode(3);
-		list.deleteNode(4);
-		list.deleteNode(9);
 		ClassNode node3 = new ClassNode(8);
 		ClassNode node4 = new ClassNode(7);
 		ClassNode node5 = new ClassNode(6);
 		list.insertNode(node3);
 		list.insertNode(node4);
 		list.insertNode(node5);
+		list.deleteNode(8);
+	/*	list.deleteNode(4);
+		list.deleteNode(9);*/
 		int count = list.NodeLength(HEAD);
 		System.out.println(count);
 
